@@ -1,0 +1,178 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif ;
+    /* chữ k chân, dễ nhìn cho các thanh navigation */
+}
+
+/* comon */
+clear {
+    clear: both;
+}
+
+.col-half {
+    width: 50%;
+}
+
+/*  */
+#header {
+    height: 70px;
+    background-color: orange;
+    line-height: 70px;
+    padding-left: 20px;
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+    /* viết hoa hết tất cả các chữ */
+}
+
+#nav {
+    padding-left: 25%;
+    height: 50px;
+    background-color: rgb(13, 101, 133);
+}
+
+#nav >li {
+    display: inline-block;
+}
+
+#nav li a {
+    text-decoration: none;
+    /* bỏ gạch chân */
+    padding: 0 18px;
+    line-height: 50px;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* hover */
+#nav li:hover {
+    background-color: blue;
+}
+
+/* ẩn */
+#nav .subnav {
+    display: none;
+    list-style-type: none;
+    position:absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(88, 153, 206);
+    box-shadow: 0px  0px 1px;
+}
+
+#nav .subnav >li {
+    padding-left: 20px;
+}
+
+/* hiện */
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#search {
+    width: 25%;
+    /* min-height: 700px; */
+    float: left;
+}
+
+#search p {
+    margin: 24px 26px 7px;
+    font-weight: 550;
+}
+
+#search input {
+    margin-left: 24px;
+    width: 65%;
+    height: 26px;
+    background-color: rgb(237, 250, 242);
+}
+
+#search button {
+    height: 26px;
+    width: 10%;
+    background-color: rgb(169, 224, 152);
+}
+
+#content {
+    float: left;
+    width: 75%;
+    padding-bottom:50px;
+    /* background-color: rgb(201, 253, 196); */
+}
+
+#content .subject {
+    float: left;
+    width: 240px;
+    height: 310px;
+    /* margin: 20px 0px 0px;
+    margin-left: 15px; */
+    /* padding: 10px; */
+    border: 1px solid black;
+    font-weight: 700;
+}
+
+#content #row1 .subject {
+    margin: 15px 5px 0px;
+    background-color: rgb(241, 239, 239);
+}
+
+#content #row2 .subject {
+    margin: 10px 5px 0px;
+    background-color: rgb(241, 239, 239);
+
+}
+
+#content .img {
+    width: 225px;
+    height: 265px;
+    padding-left: 15px;
+}
+
+#content .sub-subject {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+#footer {
+    clear: left;
+    min-height: 50px;
+    background-color: orange;
+}
+
+#footer p{
+    color: white;
+    line-height: 50px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    #nav >li {
+        display: block;
+        text-align: center;
+    }
+    #nav {
+        height: auto;
+        padding-left: 0;
+    }
+
+    #maincontent #content {
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    #maincontent #search {
+        width: 80%;
+    }
+}
+
+
